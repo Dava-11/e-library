@@ -7,70 +7,69 @@ RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 RewriteRule ^directory/ - [L,R=404]
 
-# Mahasiswa
-RewriteRule ^mahasiswa$ media.php?module=mahasiswa
-RewriteRule ^tambah-mahasiswa$ media.php?module=mahasiswa&act=tambah
-RewriteRule ^simpan-mahasiswa$ content/mahasiswa/aksi.php?act=simpan
+# anggota
+RewriteRule ^anggota$ media.php?module=anggota
+RewriteRule ^tambah-anggota$ media.php?module=anggota&act=tambah
+RewriteRule ^simpan-anggota$ content/anggota/aksi.php?act=simpan
 
-RewriteRule ^edit-mahasiswa$ media.php?module=mahasiswa&edt=edit [QSA]
-RewriteRule ^edit-mahasiswa$ content/mahasiswa/edit.php?id [QSA]
-RewriteRule ^simpan-edit-mahasiswa$ content/mahasiswa/aksi_edit.php?act_edt_mhs=simpanedt
+RewriteRule ^edit-anggota$ media.php?module=anggota&edt=edit [QSA]
+RewriteRule ^edit-anggota$ content/anggota/edit.php?id [QSA]
+RewriteRule ^simpan-edit-anggota$ content/anggota/aksi_edit.php?act_edt_mhs=simpanedt
 
-RewriteRule ^hapus-mahasiswa$ media.php?module=mahasiswa&del=hapus&id [QSA]
-RewriteRule ^hapus-mahasiswa$ content/mahasiswa/hapus.php?id [QSA]
-RewriteRule ^simpan-hapus-mahasiswa$ content/mahasiswa/aksi_hapus.php?act_del_mhs=simpandel
+RewriteRule ^hapus-anggota$ media.php?module=anggota&del=hapus&id [QSA]
+RewriteRule ^hapus-anggota$ content/anggota/hapus.php?id [QSA]
+RewriteRule ^simpan-hapus-anggota$ content/anggota/aksi_hapus.php?act_del_mhs=simpandel
 
-# Dosen
-RewriteRule ^dosen$ media.php?module=dosen
-RewriteRule ^tambah-dosen$ media.php?module=dosen&actds=tambah
-RewriteRule ^simpan-dosen$ content/dosen/aksi.php?actds=simpan
+# petugas
+RewriteRule ^petugas$ media.php?module=petugas
+RewriteRule ^tambah-petugas$ media.php?module=petugas&actds=tambah
+RewriteRule ^simpan-petugas$ content/petugas/aksi.php?actds=simpan
 
-RewriteRule ^edit-dosen$ media.php?module=dosen&edtds=edit [QSA]
-RewriteRule ^edit-dosen$ content/dosen/edit.php?id [QSA]
-RewriteRule ^simpan-edit-dosen$ content/dosen/aksi_edit.php?act_edt_ds=simpanedt
+RewriteRule ^edit-petugas$ media.php?module=petugas&edtds=edit [QSA]
+RewriteRule ^edit-petugas$ content/petugas/edit.php?id [QSA]
+RewriteRule ^simpan-edit-petugas$ content/petugas/aksi_edit.php?act_edt_ds=simpanedt
+RewriteRule ^hapus-petugas$ media.php?module=petugas&delds=hapus [QSA]
+RewriteRule ^hapus-petugas$ content/petugas/hapus.php?id [QSA]
+RewriteRule ^simpan-hapus-petugas$ content/petugas/aksi_hapus.php?act_del_ds=simpandel
 
-RewriteRule ^hapus-dosen$ media.php?module=dosen&delds=hapus [QSA]
-RewriteRule ^hapus-dosen$ content/dosen/hapus.php?id [QSA]
-RewriteRule ^simpan-hapus-dosen$ content/dosen/aksi_hapus.php?act_del_ds=simpandel
+# buku
+RewriteRule ^buku$ media.php?module=buku
+RewriteRule ^tambah-buku$ media.php?module=buku&actmk=tambah
+RewriteRule ^simpan-buku$ content/buku/aksi.php?actmk=simpan
 
-# Matkul
-RewriteRule ^matkul$ media.php?module=matkul
-RewriteRule ^tambah-matkul$ media.php?module=matkul&actmk=tambah
-RewriteRule ^simpan-matkul$ content/matkul/aksi.php?actmk=simpan
+RewriteRule ^edit-buku$ media.php?module=buku&edtmk=edit [QSA]
+RewriteRule ^edit-buku$ content/buku/edit.php?id [QSA]
+RewriteRule ^simpan-edit-buku$ content/buku/aksi_edit.php?act_edt_mk=simpanedt
 
-RewriteRule ^edit-matkul$ media.php?module=matkul&edtmk=edit [QSA]
-RewriteRule ^edit-matkul$ content/matkul/edit.php?id [QSA]
-RewriteRule ^simpan-edit-matkul$ content/matkul/aksi_edit.php?act_edt_mk=simpanedt
+RewriteRule ^hapus-buku$ media.php?module=buku&delmk=hapus [QSA]
+RewriteRule ^hapus-buku$ content/buku/hapus.php?id [QSA]
+RewriteRule ^simpan-hapus-buku$ content/buku/aksi_hapus.php?act_del_mk=simpandel
 
-RewriteRule ^hapus-matkul$ media.php?module=matkul&delmk=hapus [QSA]
-RewriteRule ^hapus-matkul$ content/matkul/hapus.php?id [QSA]
-RewriteRule ^simpan-hapus-matkul$ content/matkul/aksi_hapus.php?act_del_mk=simpandel
+# peminjaman
+RewriteRule ^peminjaman$ media.php?module=peminjaman
+RewriteRule ^tambah-peminjaman$ media.php?module=peminjaman&actjw=tambah
+RewriteRule ^simpan-peminjaman$ content/peminjaman/aksi.php?actjw=simpan
 
-# Jadwal
-RewriteRule ^jadwal$ media.php?module=jadwal
-RewriteRule ^tambah-jadwal$ media.php?module=jadwal&actjw=tambah
-RewriteRule ^simpan-jadwal$ content/jadwal/aksi.php?actjw=simpan
+RewriteRule ^edit-peminjaman$ media.php?module=peminjaman&edtjw=edit [QSA]
+RewriteRule ^edit-peminjaman$ content/peminjaman/edit.php?id [QSA]
+RewriteRule ^simpan-edit-peminjaman$ content/peminjaman/aksi_edit.php?act_edt_jw=simpanedt
 
-RewriteRule ^edit-jadwal$ media.php?module=jadwal&edtjw=edit [QSA]
-RewriteRule ^edit-jadwal$ content/jadwal/edit.php?id [QSA]
-RewriteRule ^simpan-edit-jadwal$ content/jadwal/aksi_edit.php?act_edt_jw=simpanedt
+RewriteRule ^hapus-peminjaman$ media.php?module=peminjaman&deljw=hapus [QSA]
+RewriteRule ^hapus-peminjaman$ content/peminjaman/hapus.php?id [QSA]
+RewriteRule ^simpan-hapus-peminjaman$ content/peminjaman/aksi_hapus.php?act_del_jw=simpandel
 
-RewriteRule ^hapus-jadwal$ media.php?module=jadwal&deljw=hapus [QSA]
-RewriteRule ^hapus-jadwal$ content/jadwal/hapus.php?id [QSA]
-RewriteRule ^simpan-hapus-jadwal$ content/jadwal/aksi_hapus.php?act_del_jw=simpandel
+# pengembalian
+RewriteRule ^pengembalian$ media.php?module=pengembalian
+RewriteRule ^tambah-pengembalian$ media.php?module=pengembalian&actabs=tambah
+RewriteRule ^simpan-pengembalian$ content/pengembalian/aksi.php?actabs=simpan
 
-# Absensi
-RewriteRule ^absensi$ media.php?module=absensi
-RewriteRule ^tambah-absensi$ media.php?module=absensi&actabs=tambah
-RewriteRule ^simpan-absensi$ content/absensi/aksi.php?actabs=simpan
+RewriteRule ^edit-pengembalian$ media.php?module=pengembalian&edtabs=edit [QSA]
+RewriteRule ^edit-pengembalian$ content/pengembalian/edit.php?id [QSA]
+RewriteRule ^simpan-edit-pengembalian$ content/pengembalian/aksi_edit.php?act_edt_abs=simpanedt
 
-RewriteRule ^edit-absensi$ media.php?module=absensi&edtabs=edit [QSA]
-RewriteRule ^edit-absensi$ content/absensi/edit.php?id [QSA]
-RewriteRule ^simpan-edit-absensi$ content/absensi/aksi_edit.php?act_edt_abs=simpanedt
-
-RewriteRule ^hapus-absensi$ media.php?module=absensi&delabs=hapus [QSA]
-RewriteRule ^hapus-absensi$ content/absensi/hapus.php?id [QSA]
-RewriteRule ^simpan-hapus-absensi$ content/absensi/aksi_hapus.php?act_del_abs=simpandel
+RewriteRule ^hapus-pengembalian$ media.php?module=pengembalian&delabs=hapus [QSA]
+RewriteRule ^hapus-pengembalian$ content/pengembalian/hapus.php?id [QSA]
+RewriteRule ^simpan-hapus-pengembalian$ content/pengembalian/aksi_hapus.php?act_del_abs=simpandel
 
 
 RewriteRule ^keluar$ logout.php
