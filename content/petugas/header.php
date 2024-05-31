@@ -1,19 +1,12 @@
 <?php
-    include 'inc/connection.php';
-    $not=0;
-    $res = mysqli_query($link,"select * from request_books where read1='no'");
-    $not= mysqli_num_rows($res);
+    include '../../konfig/koneksi.php';
  ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>PINJAM BUKuu</title>
-	<link rel="stylesheet" href="inc/css/bootstrap.min.css">
-	<link rel="stylesheet" href="inc/css/bootstrap-select.min.css">
-	<link rel="stylesheet" href="inc/css/fontawesome-all.min.css">
-	<link rel="stylesheet" href="inc/css/datatables.min.css">
-	<link rel="stylesheet" href="inc/css/pro1.css">
+	<title>E-Library</title>
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600" rel="stylesheet">
 </head>
 <body>
