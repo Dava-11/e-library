@@ -8,13 +8,13 @@ RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 RewriteRule ^directory/ - [L,R=404]
 
 # Mahasiswa
-RewriteRule ^mahasiswa$ media.php?module=mahasiswa
-RewriteRule ^tambah-mahasiswa$ media.php?module=mahasiswa&act=tambah
-RewriteRule ^simpan-mahasiswa$ content/mahasiswa/aksi.php?act=simpan
+RewriteRule ^anggota$ media.php?module=anggota
+RewriteRule ^tambah-anggota$ media.php?module=anggota&act=tambah
+RewriteRule ^simpan-anggota$ content/anggota/aksi.php?act=simpan
 
-RewriteRule ^edit-mahasiswa$ media.php?module=mahasiswa&edt=edit [QSA]
-RewriteRule ^edit-mahasiswa$ content/mahasiswa/edit.php?id [QSA]
-RewriteRule ^simpan-edit-mahasiswa$ content/mahasiswa/aksi_edit.php?act_edt_mhs=simpanedt
+RewriteRule ^edit-anggota$ media.php?module=anggota&edt=edit [QSA]
+RewriteRule ^edit-anggota$ content/anggota/edit.php?id [QSA]
+RewriteRule ^simpan-edit-anggota$ content/anggota/aksi_edit.php?act_edt_mhs=simpanedt
 
 RewriteRule ^hapus-mahasiswa$ media.php?module=mahasiswa&del=hapus&id [QSA]
 RewriteRule ^hapus-mahasiswa$ content/mahasiswa/hapus.php?id [QSA]
