@@ -10,7 +10,7 @@ if (!isset($_GET['act']) || $_GET['act'] == '') {
 ?>
 
 <div class="container mt-3">
-    <h3>DAFTAR MEMBER</h3>
+    <h3>DAFTAR ANGGOTA</h3>
     <a href="tambah-mahasiswa">
         <button type="button" class="btn btn-primary mb-3">Tambah</button>
     </a>
